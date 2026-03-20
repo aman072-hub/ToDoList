@@ -3,6 +3,7 @@ import CompletedTasks from "./pages/CompletedTasks";
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
