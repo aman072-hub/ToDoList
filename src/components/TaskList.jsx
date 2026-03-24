@@ -7,7 +7,7 @@ const TaskList = ({ tasks, toggleComplete, deleteTask }) => {
   }
 
   return (
-    <ul className="space-y-3">
+    <ul className="space-y-3 max-h-72 overflow-x-auto">
       {tasks.map((task, i) => (
         <TaskItem
           key={i}
