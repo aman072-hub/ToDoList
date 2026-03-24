@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import NotFound from "./pages/NotFound";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -30,6 +31,7 @@ const App = () => {
       path: "/",
       element: <Layout search={search} setSearch={setSearch} />,
       children: [
+        { path: "/", element: <HomePage /> },
         {
           path: "/tasks",
           element: (
@@ -52,6 +54,10 @@ const App = () => {
               search={search}
             />
           ),
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ],
     },
